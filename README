@@ -1,0 +1,8 @@
+This is a reasonably simple Google App Engine which is intended to proxy requests to the Twitter API.
+
+The basic problem it's trying to solve is that if you want to release an application to the public which consumes the
+Twitter API (and requires oauth), you have to share your oauth application key and secret with everyone who uses the
+application.  Either that, or have each person sign up for their own key and secret.
+
+I faced this problem with my Wordpress plugin which needs to consume the API.  I didn't want to include my application
+key and secret in the sourcecode for the plugin for all to see, so I needed a better solution.
