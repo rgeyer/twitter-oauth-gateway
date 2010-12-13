@@ -1,0 +1,12 @@
+application: oathgw
+version: 1
+runtime: python
+api_version: 1
+handlers:
+- url: /jobs/.*
+  script: tas_oauth_gateway.py
+  login: admin
+
+- url: /.*
+  script: tas_oauth_gateway.py
+  secure: always

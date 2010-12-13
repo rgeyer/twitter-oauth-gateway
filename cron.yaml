@@ -1,0 +1,4 @@
+cron:
+- description: Daily job to clear out orphaned AuthTokens
+  url: /jobs/authTokens/clear
+  schedule: every 24 hours
