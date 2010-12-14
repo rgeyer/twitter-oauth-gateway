@@ -229,7 +229,8 @@ class auth_token_job(webapp.RequestHandler):
     listOfAssociatedAuthTokens = []
     authRequestQuery = AuthRequest.all()
     for authReq in authRequestQuery:
-      listOfAssociatedAuthTokens.append(authReq.authToken.key())
+      if None != authReq and None != authReq.authToken:
+        listOfAssociatedAuthTokens.append(authReq.authToken.key())
 
     authTokenQuery = oauth.AuthToken.all()
     for authToken in authTokenQuery:

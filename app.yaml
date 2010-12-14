@@ -10,3 +10,6 @@ handlers:
 - url: /.*
   script: tas_oauth_gateway.py
   secure: always
+
+builtins:
+- datastore_admin: on
